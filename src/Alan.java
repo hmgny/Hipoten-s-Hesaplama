@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class Alan {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
@@ -10,8 +10,14 @@ public class Main {
         System.out.print("2.kenar uzunluğunu giriniz: ");
         int b = input.nextInt();
 
-        double c = Math.sqrt((a*a)+(b*b));
-        System.out.println("Hipotenüs uzunluğu: " + c);
+        System.out.print("2.kenar uzunluğunu giriniz: ");
+        int c = input.nextInt();
+
+        int cevre = a + b + c;
+        double u = cevre/2;
+        double alan = Math.sqrt(u * (u - a) * (u - b) * (u - c));
+
+        System.out.println("Alan: " + alan);
 
 
 
